@@ -11,6 +11,6 @@ func BookRoutes(rg *gin.RouterGroup) {
 	author.GET("/", BookHandler.Index)
 	author.GET("/:id", BookHandler.Detail)
 	author.POST("/", BookHandler.Create)
-	author.PUT("/:id", BookHandler.Update)
+	// author.PUT("/:id", BookHandler.Update)
 	// author.DELETE("/:id", BookHandler.Delete)
 }
