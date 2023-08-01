@@ -1,6 +1,8 @@
 package config
 
 import (
+	"os"
+
 	log "github.com/sirupsen/logrus"
 
 	"github.com/spf13/viper"
@@ -30,5 +32,6 @@ func LoadConfig() {
 		log.Fatal()
 	}
 
+	os.Setenv("PORT", ENV.PORT)
 	log.Println("Server loaded successfully ...")
 }
